@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background-color: #FFF5DA;
+    max-height: 100vh;
+    margin: 0;
+}
+h2.header {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    border: solid 3px #5D534A;
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    padding: 15px;
+    background-color: #5D534A;
+    box-shadow:5px 5px 10px -14px #5D534A;
+
+}
+
+.resulttab {
+    border: solid 3px #D6D2C4;
+    border-radius: 10px;
+    height: 25%;
+    background-color: #D6D2C4;
+    text-align: right;
+}
+
+.result {
+    margin:5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#result {
+    font-size: 30px;
+    margin: 0;
+}
+
+#current {
+    font-size: 20px;
+    margin: 0;
+}
+
+input[type=number]{
+    font-size: 20px;
+    margin: 0;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+}
+input[type=number]:focus {
+    outline: none;
+}
+
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+
+
+.operationstab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+
+.buttons {
+    display: grid;
+  
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr;
+     grid-gap: 10px;
+     
+}
+
+.buttons button {
+    font-size: 1.5vw;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    border: #F7DAD9 5px solid;
+    border-radius: 10px; 
+    background-color: #F7DAD9;
+
+}
+
+.buttons button:hover {
+    background-color: #fbcccb;
+    border: #fbcccb 5px solid;
+} 
+
+.tag {
+    position: absolute;
+    bottom: 0;
+}
+
+.tag a {
+    text-decoration: none;
+    color: black;
+}
