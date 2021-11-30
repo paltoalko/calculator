@@ -13,33 +13,27 @@
       
      <div class="calculator">
             <div class="resulttab">
-                <div class="result">
-                    <p id="result">100</p>
-                    <input type="number" id="current" value="10">
-                </div>
+                <div class="calculator__display">0</div>
             </div>
         <div class="operationstab">
-            <div class="buttons">
-                <button id="sqr">x&#178;</button>
-                <button id="sqrroot">&#8730;</button>
-                <button id="percentage">%</button>
-                <button id="delete">C</button>
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
-                <button id="add">+</button>
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="substract">-</button>
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="multiply">*</button>
-                <button id="dot">.</button>
-                <button id="zero">0</button>
-                <button id="equals">=</button>
-                <button id="divide">/</button>
+            <div class="calculator__keys">
+                <button class="plus" data-type="operator">+</button>
+                <button class="minus" data-type="operator">-</button>
+                <button class="times" data-type="operator">&times;</button>
+                <button class="divide" data-type="operator">÷</button>
+                <button class="one" data-type="number">1</button>
+                <button class="two" data-type="number">2</button>
+                <button class="three" data-type="number">3</button>
+                <button class="four" data-type="number">4</button>
+                <button class="five" data-type="number">5</button>
+                <button class="six" data-type="number">6</button>
+                <button class="seven" data-type="number">7</button>
+                <button class="eight" data-type="number">8</button>
+                <button class="nine" data-type="number">9</button>
+                <button class="zero" data-type="number">0</button>
+                <button class="decimal" data-type="number">.</button>
+                <button class="clear" data-type="number">C</button>
+                <button class="equal" data-type="equal">=</button>
             </div>
          </div>
          
@@ -48,5 +42,7 @@
             <a href="https://github.com/paltoalko" target="_blank">@martawesolowska</a>
         </div>  
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

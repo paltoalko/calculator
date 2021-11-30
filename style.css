@@ -34,78 +34,131 @@ h2.header {
 }
 
 .resulttab {
-    border: solid 3px #D6D2C4;
+    border: solid 3px white;
     border-radius: 10px;
     height: 25%;
-    background-color: #D6D2C4;
+    background-color: white;
     text-align: right;
 }
 
-.result {
-    margin:5px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+.calculator__display {
+    margin:15px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 32px;
 }
-
-#result {
-    font-size: 30px;
-    margin: 0;
-}
-
-#current {
-    font-size: 20px;
-    margin: 0;
-}
-
-input[type=number]{
-    font-size: 20px;
-    margin: 0;
-    text-align: right;
-    background-color: transparent;
-    border: none;
-}
-input[type=number]:focus {
-    outline: none;
-}
-
-
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
-
-
 
 .operationstab {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 75%;
+    
 }
 
-.buttons {
+.calculator__keys {
     display: grid;
-  
-     grid-template-columns: 1fr 1fr 1fr 1fr;
-     grid-template-rows: 1fr;
-     grid-gap: 10px;
+    width: 80%;
+    height:80%;
+    gap: 10px;
+    grid-template-columns: repeat(4,auto);
+    grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
      
 }
+.one {
+    grid-area: one;
+  }
+  .two {
+    grid-area: two;
+  }
+  .three {
+    grid-area: three;
+  }
+  .four {
+    grid-area: four;
+  }
+  .five {
+    grid-area: five;
+  }
+  .six {
+    grid-area: six;
+  }
+  .seven {
+    grid-area: seven;
+  }
+  .eight {
+    grid-area: eight;
+  }
+  .nine {
+    grid-area: nine;
+  }
+  .zero {
+    grid-area: zero;
+  }
+  .decimal {
+    grid-area: decimal;
+  }
+  .clear {
+    grid-area: clear;
+  }
 
-.buttons button {
-    font-size: 1.5vw;
+  .equal {
+    grid-area: equal;
+    background-color: #D6D2C4;
+    border: #D6D2C4 5px solid;
+    transition: 0.4s;
+  }
+  
+  .equal:active {
+    background-color: #fbcccb;
+  }
+  
+
+[data-state="selected"] {
+    color:#fbcccb ;
+    background-color: black;
+    border: black 5px solid;
+}
+
+
+
+button {
+    font-size: 20px;
     text-align: center;
-    width: 55px;
-    height: 55px;
     border: #F7DAD9 5px solid;
     border-radius: 10px; 
     background-color: #F7DAD9;
+    transition: 0.4s;
 
 }
 
-.buttons button:hover {
+.active {
+    background-color: #ffbebd;
+    border: #ffbebd 5px solid;
+}
+
+[data-type='number']:hover {
     background-color: #fbcccb;
     border: #fbcccb 5px solid;
+    color: black;
 } 
+
+[data-type='operator']:hover {
+    background-color: #000000;
+    border: #000000 5px solid;
+    color: #fbcccb;
+} 
+
+[data-type='equal']:hover {
+    background-color: white;
+    border: white 5px solid;
+}
+
 
 .tag {
     position: absolute;
