@@ -125,6 +125,12 @@ h2.header {
     border: black 5px solid;
 }
 
+[data-state="normal"] {
+    color:black;
+    background-color: #F7DAD9;
+    border: #F7DAD9 5px solid;
+}
+
 
 
 button {
@@ -142,7 +148,8 @@ button {
     border: #ffbebd 5px solid;
 }
 
-[data-type='number']:hover {
+[data-type='number']:hover,
+[data-type='clear']:hover {
     background-color: #fbcccb;
     border: #fbcccb 5px solid;
     color: black;
